@@ -4,7 +4,7 @@ Template.puzzledisplay.events({
 
 	$("#newuseranswer").val();
 
-	if (newUserAnswer == puzzleanswer){
+	if (newUserAnswer == newPuzzleAnswer){
 		alert("hi");
 	}
 
