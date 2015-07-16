@@ -1,11 +1,11 @@
-Template.newquote.events({
+Template.submit.events({
  'click #savePuzzle': function(event){
  	var newPuzzleName = $("newpuzzlename").val();
- 	var newPuzzle = $("newpuzzle").val();
+ 	var newPuzzle = $("newpuzzle").html();
  	var newPuzzleAnswer = $("newpuzzleanswer").val();
 
  	$("#newpuzzlename").val("");
- 	$("#newpuzzle").val("");
+ 	$("#newpuzzle").html("");
  	$("#newpuzzleanswer").val("");
 
 
