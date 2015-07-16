@@ -13,3 +13,5 @@ accounts-password
 jparker:gravatar
 ian:accounts-ui-bootstrap-3
 fezvrasta:bootstrap-material-design-noicons
+cfs:standard-packages
+cfs:gridfs
