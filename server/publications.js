@@ -1,5 +1,7 @@
 Meteor.publish("theProfiles",function(){return Profiles.find();});
 
+Meteor.publish("ourpuzzles",function(){return Puzzles.find();});
+
 
 Meteor.publish("userData", function () {
   if (this.userId) {
