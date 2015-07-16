@@ -8,7 +8,7 @@ Template.submit.events({
  	$("#newpuzzle").val("");
  	$("#newpuzzleanswer").val("");
 
- 	alert(JSON.stringify(newpuzzlename));
+ 	
 
 
  	var puzzledata =
