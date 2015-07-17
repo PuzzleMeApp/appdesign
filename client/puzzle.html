@@ -26,14 +26,17 @@
 	</div>
 </template>
 
-
-
 <template name="puzzleLine">
 	<tr>
 		<td>
 			<a href="{{pathFor 'puzzledisplay'}}">
 			<span class="puzzlename">{{puzzlename}}</span>
 			</a>
+
+			{{> demoTemp}}
+
 		</td>
 	</tr>
+	
 </template>
+

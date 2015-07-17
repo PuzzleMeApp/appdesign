@@ -7,13 +7,12 @@ Template.puzzledisplay.events({
 		
 		Router.go('/yay');
 
+
 	}
 	else{
 		
 		Router.go('/boo');
 	}
-	
-
 
 
 

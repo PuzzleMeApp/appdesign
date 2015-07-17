@@ -26,3 +26,44 @@ Template.puzzle.events({
   }
 
 });
+
+
+Session.set("counter",0);
+
+
+Template.demoTemp.events(
+{
+"click button#clicker":
+ function(event) {
+  var c = Session.get("counter");
+  Session.set("counter",c+1);
+
+    } 
+  }
+)
+
+Template.demoTemp.events(
+{
+"click button#exit":
+function(event) {
+  var c = Session.get("counter");
+  Session.set("counter",c-1);
+
+  }
+}
+);
+
+
+Template.demoTemp.helpers({
+  theCount: function(){
+    return Session.get("counter");
+  }
+}) 
+
+/*'click button.clicker': function (event) {
+  counter.update(this._id,{$inc:{c: 1}}); 
+  },
+
+'click button.exit': function (event) {
+  counter.update(this._id,{$inc:{c: -1}}); 
+  }, */
