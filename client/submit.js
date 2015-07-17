@@ -4,6 +4,7 @@ Template.submit.events({
  	var newPuzzle = $("#newpuzzle").val();
  	var newPuzzleAnswer = $("#newpuzzleanswer").val();
  	 Session.set("answer",$("#newpuzzleanswer").val());
+ 	var reset = 1
 
  	$("#newpuzzlename").val("");
  	$("#newpuzzle").val("");
@@ -17,6 +18,7 @@ Template.submit.events({
  			puzzle:newPuzzle,
  			puzzleanswer:newPuzzleAnswer,
  			createdAt:new Date(),
+ 			reset:1
  	};
 
  	console.dir(puzzledata);

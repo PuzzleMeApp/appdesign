@@ -1,20 +1,19 @@
 Session.set("showNum",5);
 
 Template.puzzle.helpers({
-  puzzle: function () {
-	  return Puzzle.find({},
+  puzzles: function () {
+	  return Puzzles.find({},
                        {limit:Session.get("showNum"),
                         sort:{createdAt:-1}}
-                      ); // we are finding all of the quotes on the server to show on the client
+                      ).fetch(); // we are finding all of the quotes on the server to show on the client
   },
   showNum: function(){
     return Session.get("showNum");
   },
 
-  puzzles: function(){return Puzzles.find();}
 });
   var currentnum = {currentnum:Session.get("showNum")};
-
+ 
 
 Template.puzzle.events({
   
