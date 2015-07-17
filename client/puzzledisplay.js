@@ -16,6 +16,5 @@ Template.puzzledisplay.events({
 
 
 
-
 }
 })
