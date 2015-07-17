@@ -15,7 +15,9 @@ Template.submit.events({
  	var puzzledata =
  		{puzzlename:newPuzzleName,
  			puzzle:newPuzzle,
- 			puzzleanswer:newPuzzleAnswer};
+ 			puzzleanswer:newPuzzleAnswer,
+ 			createdAt:new Date(),
+ 	};
 
  	console.dir(puzzledata);
 

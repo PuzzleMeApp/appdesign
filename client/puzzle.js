@@ -23,7 +23,7 @@ Template.puzzle.events({
   },
     'click button#showLess': function(event){
     Session.set("showNum",-2 + Session.get("showNum"))
+
   }
- 
 
 });
