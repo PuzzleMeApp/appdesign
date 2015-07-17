@@ -4,11 +4,13 @@ Template.submit.events({
  	var newPuzzle = $("#newpuzzle").val();
  	var newPuzzleAnswer = $("#newpuzzleanswer").val();
 
+ 	Session.set("answer",$("#newpuzzleanswer").val());
+
  	$("#newpuzzlename").val("");
  	$("#newpuzzle").val("");
  	$("#newpuzzleanswer").val("");
 
- 	Session.set("answer",$("#newpuzzleanswer").val(""));
+ 	
 
 
  	var puzzledata =
