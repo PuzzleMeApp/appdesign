@@ -7,11 +7,16 @@ $(document).ready(function(e){
 		$('.input-group #search_param').val(param);
 	});
 });
-Template.submit.events({
+Template.search.events({
  'click #searchButton': function(event){
- 	var searchData = $("#searchBar").val() 
+ 	var searchData = $("#searchWorking").val(); 
+ 	var searchWorking = Puzzles.findOne({puzzlename:searchData})
+ 	
+ 	if (searchWorking == undefined)
+ 		{
 
-
-
+ 			var searchWorking = People.findOne({username:searchData})
+ 		}
+alert(searchWorking)
 
  	}})
