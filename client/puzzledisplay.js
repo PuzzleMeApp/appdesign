@@ -6,9 +6,6 @@ Template.puzzledisplay.events({
 		alert("Correct answer");
 	}
 
-	
-
-
 
 
 
