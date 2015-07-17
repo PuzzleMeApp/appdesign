@@ -2,15 +2,24 @@
 	<h2>The most recent puzzles are </h2>
 	<h4>currently showing </h4><h4>{{currentnum}}</h4> <h4>puzzles</h4>
 	<div>
-		<table class="table table-striped" id="puzzlelist">
+		<table  class="table table-striped" id="puzzlelist">
 			<tbody>
-			{{#each puzzles}}
-				{{> puzzleLine}}
-			{{/each}}
+				
+					
+					
+						{{#each puzzles}}
+							{{> puzzleLine}}
+						{{/each}}
+					
+					
+				
 			</tbody>
+	
 		</table>
-		<button id="showMore">Show More Puzzles</button>
-		<button id="showLess">Show Fewer Puzzles</button>
+		<center>
+			<button id="showMore">Show More Puzzles</button>
+			<button id="showLess">Show Fewer Puzzles</button>
+		</center>
 	</div>
 </template>
 
