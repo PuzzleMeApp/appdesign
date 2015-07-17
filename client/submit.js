@@ -8,7 +8,7 @@ Template.submit.events({
  	$("#newpuzzle").val("");
  	$("#newpuzzleanswer").val("");
 
- 	
+ 	Session.set("answer",$("#newpuzzleanswer").val(""));
 
 
  	var puzzledata =
