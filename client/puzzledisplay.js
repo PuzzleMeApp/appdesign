@@ -4,7 +4,7 @@ Template.puzzledisplay.events({
 
 	$("#newuseranswer").val();
 
-	if (newUserAnswer == $(Session.get("answer")); {
+	if (newUserAnswer == $(Session.get("answer"))) {
 		alert("hi");
 	}
 
