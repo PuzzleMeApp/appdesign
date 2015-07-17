@@ -3,8 +3,7 @@ Template.submit.events({
  	var newPuzzleName = $("#newpuzzlename").val();
  	var newPuzzle = $("#newpuzzle").val();
  	var newPuzzleAnswer = $("#newpuzzleanswer").val();
-
- 	Session.set("answer",$("#newpuzzleanswer").val());
+ 	 Session.set("answer",$("#newpuzzleanswer").val());
 
  	$("#newpuzzlename").val("");
  	$("#newpuzzle").val("");
