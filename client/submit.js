@@ -21,7 +21,7 @@ Template.submit.events({
  			puzzle:newPuzzle,
  			puzzleanswer:newPuzzleAnswer,
  			createdAt:new Date(),
- 			counter:0
+ 			counter:Session.set("counter",0)
  	
  	};
 

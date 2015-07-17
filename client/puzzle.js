@@ -28,7 +28,7 @@ Template.puzzle.events({
 });
 
 
-
+Session.set("counter",0);
 
 
 Template.demoTemp.events(
@@ -36,7 +36,7 @@ Template.demoTemp.events(
 "click button#clicker":
  function(event) {
  
-  Puzzle.update(this._id,{$inc:{counter: 1}}); ;
+  Puzzles.update(this._id,{$inc:{counter: 1}}); ;
 
     } 
   }
@@ -46,7 +46,7 @@ Template.demoTemp.events(
 {
 "click button#exit":
 function(event) {
-  Puzzle.update(this._id,{$inc:{counter: -1}}); 
+  Puzzles.update(this._id,{$inc:{counter: -1}}); 
 
   }
 }

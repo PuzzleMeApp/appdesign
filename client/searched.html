@@ -1,0 +1,22 @@
+
+<template name="searched">
+<table class="table table-striped">
+<tbody>
+ {{#each searched}}
+							{{> searchpuzzleLine}}
+						{{/each}}
+ {{#each searched}}
+							{{> searchuserLine}}
+						{{/each}}
+</tbody>
+
+</table>
+
+</template>
+
+<template name="searchpuzzleLine">
+	<a href='"{{pathFor 'puzzledisplay'}}"'>{{puzzlename}}</a>
+</template>
+<template name="searchuserLine">
+
+</template>

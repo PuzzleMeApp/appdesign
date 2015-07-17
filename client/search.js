@@ -10,13 +10,13 @@ $(document).ready(function(e){
 Template.search.events({
  'click #searchButton': function(event){
  	var searchData = $("#searchWorking").val(); 
- 	var searchWorking = Puzzles.findOne({puzzlename:searchData})
+ 	var searchWorking = Puzzles.find({puzzlename:searchData}).fetch()
  	
  	if (searchWorking == undefined)
  		{
 
  			var searchWorking = People.findOne({username:searchData})
  		}
-alert(searchWorking)
-
+ 	
+ 	
  	}})
