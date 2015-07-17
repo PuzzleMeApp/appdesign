@@ -1,7 +1,7 @@
 Session.set("showNum",5);
 
 Template.puzzle.helpers({
-  quotes: function () {
+  puzzle: function () {
 	  return Puzzle.find({},
                        {limit:Session.get("showNum"),
                         sort:{createdAt:-1}}
@@ -13,7 +13,7 @@ Template.puzzle.helpers({
 
   puzzles: function(){return Puzzles.find();}
 });
-
+  var currentnum = {currentnum:Session.get("showNum")};
 
 
 Template.puzzle.events({
@@ -24,4 +24,6 @@ Template.puzzle.events({
     'click button#showLess': function(event){
     Session.set("showNum",-2 + Session.get("showNum"))
   }
+ 
+
 });
