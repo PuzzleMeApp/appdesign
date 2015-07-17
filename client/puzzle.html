@@ -1,0 +1,27 @@
+<template name="puzzle">
+	<h2>The most recent puzzles are </h2>
+	<h4>currently showing </h4><h4>{{currentnum}}</h4> <h4>puzzles</h4>
+	<div>
+		<table class="table table-striped" id="quotelist">
+			<tbody>
+			{{#each puzzles}}
+				{{> puzzleLine}}
+			{{/each}}
+			</tbody>
+		</table>
+		<button id="showMore">Show More Puzzles</button>
+		<button id="showLess">Show Fewer Puzzles</button>
+	</div>
+</template>
+
+
+
+<template name="puzzleLine">
+	<tr>
+		<td>
+			<a href="{{pathFor 'puzzledisplay'}}">
+			<span class="puzzlename">{{puzzlename}}</span>
+			</a>
+		</td>
+	</tr>
+</template>
