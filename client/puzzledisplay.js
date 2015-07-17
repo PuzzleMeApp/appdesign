@@ -3,7 +3,7 @@ Template.puzzledisplay.events({
 	var newUserAnswer = $("#newuseranswer").val();
 	
 	if (newUserAnswer == (Session.get("answer"))) {
-		console.log("hi");
+		alert("Correct answer");
 	}
 
 	
