@@ -7,3 +7,11 @@ $(document).ready(function(e){
 		$('.input-group #search_param').val(param);
 	});
 });
+Template.submit.events({
+ 'click #searchButton': function(event){
+ 	var searchData = $("#searchBar").val() 
+
+
+
+
+ 	}})
