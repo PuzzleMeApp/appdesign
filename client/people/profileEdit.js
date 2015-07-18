@@ -11,22 +11,29 @@ Template.profileEdit.events({
 		var bio = event.target.bio.value;
 		var firstName = event.target.firstName.value;
 		var lastName = event.target.lastName.value;
-		Session.set( "age",event.target.age.value);
-		Session.set("userName",event.target.userName.value);
+		var age= event.target.age.value;
+		var userName=event.target.userName.value;
+		
+		var age1 = $("#age").val();
+		var bio1 = $("#bio").val();
+		var firstName1 = $("#firstName").val();
+		var lastName1 = $("#lastName").val();
+		var userName1 = $("#userName").val();
+		
 		Meteor.users.update(this._id,
 			{$set:{'profile.bio':bio, 
 					'profile.firstName':firstName, 
 					'profile.lastName':lastName,
-					'profile.age':Session.get("age"),
-					'profile.username':Session.get("userName")}});
+					'profile.age':age,
+					'profile.username':userName}});
 		Router.go('/profile/'+this._id);
 
 		var userData = {
-			bio:bio,
-			firstName:firstName,
-			lastName:lastName,
-			age:Session.get("age"),
-			userName:Session.get("userName"),
+			bio:bio1,
+			firstName:firstName1,
+			lastName:lastName1,
+			age:age1,
+			userName:userName1,
 			userID:this._id
 
 

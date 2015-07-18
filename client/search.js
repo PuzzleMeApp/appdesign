@@ -9,14 +9,8 @@ $(document).ready(function(e){
 });
 Template.search.events({
  'click #searchButton': function(event){
- 	var searchData = $("#searchWorking").val(); 
- 	var searchWorking = Puzzles.find({puzzlename:searchData}).fetch()
- 	
- 	if (searchWorking == undefined)
- 		{
-
- 			var searchWorking = People.findOne({username:searchData})
- 		}
- 	
- 	
+ 	Session.set("searchData",$("#searchWorking").val()); 
+ 	Session.set("searchWorking",Puzzles.find({puzzlename:Session.get("searchData")}).fetch());
+ 	Session.set("searchPeople",People.find({userName:Session.get("searchData")}).fetch());
  	}})
+var monkey = {userSearch:Session.get("searchData")};

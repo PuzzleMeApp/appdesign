@@ -1,22 +1,38 @@
 
 <template name="searched">
-<table class="table table-striped">
-<tbody>
- {{#each searched}}
-							{{> searchpuzzleLine}}
-						{{/each}}
- {{#each searched}}
-							{{> searchuserLine}}
-						{{/each}}
-</tbody>
+	<h1 class="jumbotron text-center">Your search results</h1>
+	<h3>Puzzles matching what {{userSearch}}.</h3>
+	<div>
+		<table class="table table-striped" id="searched list">
+			<tbody>
+					<h1>Puzzles that are named {{userSearch}}</h1>
+	 						{{#each searched}}
+								{{> searchpuzzleLine}}
+							{{/each}}
+					<h1> Usernames that match {{userSearch}}</h1>
+							{{#each searchusers}}
+								{{> searchUserLine}}
+							{{/each}}
+			</tbody>
 
-</table>
-
+		</table>
+	</div>
 </template>
 
 <template name="searchpuzzleLine">
-	<a href='"{{pathFor 'puzzledisplay'}}"'>{{puzzlename}}</a>
+	<tr>
+		<td>
+			<a href='{{pathFor 'puzzledisplay'}}'>
+				<h1 class="puzzlename text-center">{{puzzlename}}</h1></a>
+		</td>
+	</tr>
 </template>
 <template name="searchuserLine">
+	<tr>
+		<td>
+			<a href='{{pathFor 'profile'}}'>
+				<h1 class="username text-center">{{userName}}</h1></a>
+		</td>
+	</tr>
 
 </template>

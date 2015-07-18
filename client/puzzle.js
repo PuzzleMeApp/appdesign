@@ -20,7 +20,7 @@ Template.puzzle.events({
   'click button#showMore': function(event){
     Session.set("showNum",2 + Session.get("showNum"))
   },
-    'click button#showLess': function(event){
+    'click button#showLess': function(event){1
     Session.set("showNum",-2 + Session.get("showNum"))
 
   }
