@@ -4,7 +4,7 @@ Template.puzzle.helpers({
   puzzles: function () {
 	  return Puzzles.find({},
                        {limit:Session.get("showNum"),
-                        sort:{createdAt:-1}}
+                        sort:{counter:-1}}
                       ).fetch(); // we are finding all of the quotes on the server to show on the client
   },
   showNum: function(){
