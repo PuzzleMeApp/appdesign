@@ -36,7 +36,7 @@ Template.demoTemp.events(
 "click button#clicker":
  function(event) {
  
-  Puzzles.update(this._id,{$inc:{counter: 1}}); ;
+  Puzzles.update(this._id,{$inc:{counter: 1}});
 
     } 
   }

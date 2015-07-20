@@ -4,19 +4,37 @@
 	<div>
 		
 		<table class="table table-striped" id="searched list">
+			{{#if display}}
+			{{else}}
 			
 			<tbody>
 				
-					<h1>Puzzles that are named {{usersearch}}</h1>
+					<h1><script>
+	if (Session.get("searchWorking") == "") {
+ 			
+ 			var puzzlecheck=("There are no puzzles named")
+ 		} else {
+ 			var puzzlecheck = ("The puzzles that are named")
+ 		}}
+ 	
+ 			}
+ 			})</script>{{puzzlecheck}}{{usersearch}}</h1>
 	 						{{#each searched}}
 								{{> searchpuzzleLine}}
 							{{/each}}
-					<h1> Usernames that match {{usersearch}}</h1>
+				
+					<h1><script>
+ 	if (Session.get("searchPeople") == ""){
+ 		var usercheck=("There are no users named")
+ 		} else {
+ 			var usercheck = ("The users that are named")}</script>{{usercheck}}{{usersearch}}</h1>
 							{{#each searchusers}}
 								{{> searchUserLine}}
 							{{/each}}
+				
 
 			</tbody>
+			{{/if}}
 			
 
 		</table>
