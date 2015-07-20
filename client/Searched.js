@@ -5,5 +5,15 @@ Template.searched.helpers({
 	
 	searchusers: function () {
 	  return Session.get("searchPeople"); 
-	}
+
+
+	},
+	usersearch:function () {
+		return Session.get("searchData");
+
+
+	},
+
+	
 })
+

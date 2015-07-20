@@ -1,21 +1,26 @@
 
 <template name="searched">
 	<h1 class="jumbotron text-center">Your search results</h1>
-	<h3>Puzzles matching what {{userSearch}}.</h3>
 	<div>
+		
 		<table class="table table-striped" id="searched list">
+			
 			<tbody>
-					<h1>Puzzles that are named {{userSearch}}</h1>
+				
+					<h1>Puzzles that are named {{usersearch}}</h1>
 	 						{{#each searched}}
 								{{> searchpuzzleLine}}
 							{{/each}}
-					<h1> Usernames that match {{userSearch}}</h1>
+					<h1> Usernames that match {{usersearch}}</h1>
 							{{#each searchusers}}
 								{{> searchUserLine}}
 							{{/each}}
+
 			</tbody>
+			
 
 		</table>
+		
 	</div>
 </template>
 
