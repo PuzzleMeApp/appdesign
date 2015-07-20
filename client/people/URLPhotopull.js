@@ -4,9 +4,15 @@ Template.URLPhotopull.events({
 		var URL = $("#photoURL").val();
 
 		alert(URL);
+
+
 		
 	}
 })
+//Template.URLPhotopull.helpers({
+	//var url = ({url:$("#photoURL").val()});
+	//url:function(){
+		//return
 
 Template.URLPhotopull.helpers({
 	
@@ -14,3 +20,4 @@ Template.URLPhotopull.helpers({
 		return URL
 	}
 })
+

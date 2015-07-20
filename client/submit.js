@@ -1,10 +1,13 @@
 Template.submit.events({
+	
  'click #savePuzzle': function(event){
+ 	var counter=0;
  	var newPuzzleName = $("#newpuzzlename").val();
  	var newPuzzle = $("#newpuzzle").val();
  	var newPuzzleAnswer = $("#newpuzzleanswer").val();
  	 Session.set("answer",$("#newpuzzleanswer").val());
- 	var reset = 1
+ 	
+ 	
 
  	$("#newpuzzlename").val("");
  	$("#newpuzzle").val("");
@@ -18,7 +21,8 @@ Template.submit.events({
  			puzzle:newPuzzle,
  			puzzleanswer:newPuzzleAnswer,
  			createdAt:new Date(),
- 			reset:1
+ 			counter:Session.set("counter",0)
+ 	
  	};
 
  	console.dir(puzzledata);

@@ -4,7 +4,7 @@ Template.puzzle.helpers({
   puzzles: function () {
 	  return Puzzles.find({},
                        {limit:Session.get("showNum"),
-                        sort:{createdAt:-1}}
+                        sort:{counter:-1}}
                       ).fetch(); // we are finding all of the quotes on the server to show on the client
   },
   showNum: function(){
@@ -20,9 +20,44 @@ Template.puzzle.events({
   'click button#showMore': function(event){
     Session.set("showNum",2 + Session.get("showNum"))
   },
-    'click button#showLess': function(event){
+    'click button#showLess': function(event){1
     Session.set("showNum",-2 + Session.get("showNum"))
 
   }
 
 });
+
+
+Session.set("counter",0);
+
+
+Template.demoTemp.events(
+{
+"click button#clicker":
+ function(event) {
+ 
+  Puzzles.update(this._id,{$inc:{counter: 1}}); ;
+
+    } 
+  }
+)
+
+Template.demoTemp.events(
+{
+"click button#exit":
+function(event) {
+  Puzzles.update(this._id,{$inc:{counter: -1}}); 
+
+  }
+}
+);
+
+
+
+/*'click button.clicker': function (event) {
+  counter.update(this._id,{$inc:{c: 1}}); 
+  },
+
+'click button.exit': function (event) {
+  counter.update(this._id,{$inc:{c: -1}}); 
+  }, */
