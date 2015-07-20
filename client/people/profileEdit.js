@@ -25,20 +25,9 @@ Template.profileEdit.events({
 					'profile.firstName':firstName, 
 					'profile.lastName':lastName,
 					'profile.age':age,
-					'profile.username':userName}});
+					'profile.userName':userName}});
 		Router.go('/profile/'+this._id);
 
-		var userData = {
-			bio:bio1,
-			firstName:firstName1,
-			lastName:lastName1,
-			age:age1,
-			userName:userName1,
-			userID:this._id
-
-
-		}
-		People.insert(userData);
 
 		
 	}
