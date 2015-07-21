@@ -3,7 +3,7 @@ Template.puzzledisplay.events({
 	var newUserAnswer = $("#newuseranswer").val();
 
 	
-	if (newUserAnswer == (Session.get("answer"))) {
+	if (newUserAnswer.toUpperCase() == (Session.get("answer").toUpperCase())) {
 		
 		Router.go('/yay');
 

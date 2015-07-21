@@ -1,4 +1,6 @@
 #searchBar{
 	background-color: #ffffff;
-	margin: -15px 0px 15px 0px;
+	margin: 0px -15px 0px -15px;
 }
+
+body {padding-bottom: 70px;}
