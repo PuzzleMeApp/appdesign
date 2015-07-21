@@ -1,12 +1,10 @@
 Template.URLPhotopull.events({
 	"click #photoSubmit": function(event){
 		event.preventDefault();
-		var URL = $("#photoURL").val();
+		var photoURL = $("#photoURL").val();
 
 		alert(URL);
-
-
-		
+		console.log("photoURL");
 	}
 })
 //Template.URLPhotopull.helpers({
@@ -17,7 +15,6 @@ Template.URLPhotopull.events({
 Template.URLPhotopull.helpers({
 	
 	photoURL:function(){ // returns the URL of the gravatar photo for this email
-		return URL
 	}
 })
 
