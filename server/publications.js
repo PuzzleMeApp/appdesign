@@ -4,6 +4,8 @@ Meteor.publish("ourpuzzles",function(){return Puzzles.find();});
 
 Meteor.publish("theUsers", function(){return People.find();});
 
+Meteor.publish("theFeedback", function(){return Feedback.find();});
+
 Meteor.publish("userData", function () {
   if (this.userId) {
 	  return Meteor.users.find({}); //, //{_id: this.userId},

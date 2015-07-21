@@ -1,15 +1,15 @@
-Template.submit.events({
+Template.feedback.events({
 	
- 'click #savePuzzle': function(event){
- 	var counter=0;
+ 'click #saveFeedback': function(event){
+ 	console.log("You clicked the button!");
  	var newAuthorName = $("#authorname").val();
- 	var newFeedback = $("#feedback").val();
+ 	var newFeedback = $("#newfeedback").val();
  	
  	
  	
 
  	$("#authorname").val("");
- 	$("#feedback").val("");
+ 	$("#newfeedback").val("");
  	
 
  	
@@ -19,12 +19,12 @@ Template.submit.events({
  		{authorname:newAuthorName,
  			feedback:newFeedback,
  			
- 			createdAt:new Date(),
- 			counter:Session.set("counter",0)
+ 			createdAt:new Date()
+ 			
  	
  	};
 
- 	console.dir(puzzledata);
+ 	console.dir(feedbackdata);
 
  	Feedback.insert(feedbackdata);
 
