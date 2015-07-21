@@ -14,18 +14,13 @@ Template.profileEdit.events({
 		var age= event.target.age.value;
 		var userName=event.target.userName.value;
 		
-		var age1 = $("#age").val();
-		var bio1 = $("#bio").val();
-		var firstName1 = $("#firstName").val();
-		var lastName1 = $("#lastName").val();
-		var userName1 = $("#userName").val();
 		
 		Meteor.users.update(this._id,
 			{$set:{'profile.bio':bio, 
 					'profile.firstName':firstName, 
 					'profile.lastName':lastName,
 					'profile.age':age,
-					'profile.userName':userName}});
+					'profile.userName':userName.toLowerCase()}});
 		Router.go('/profile/'+this._id);
 
 

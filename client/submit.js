@@ -5,7 +5,7 @@ Template.submit.events({
  	var newPuzzleName = $("#newpuzzlename").val();
  	var newPuzzle = $("#newpuzzle").val();
  	var newPuzzleAnswer = $("#newpuzzleanswer").val();
- 	 Session.set("answer",$("#newpuzzleanswer").val());
+ 	
  	
  	
 
@@ -17,11 +17,16 @@ Template.submit.events({
 
 
  	var puzzledata =
- 		{puzzlename:newPuzzleName,
+ 		{puzzlename:newPuzzleName.toLowerCase(),
  			puzzle:newPuzzle,
- 			puzzleanswer:newPuzzleAnswer,
+ 			puzzleanswer:newPuzzleAnswer.toLowerCase(),
  			createdAt:new Date(),
- 			counter:Session.set("counter",0)
+ 			counter:Session.set("counter",0),
+ 			
+
+ 			
+
+
  	
  	};
 

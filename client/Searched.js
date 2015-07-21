@@ -28,14 +28,14 @@ Template.searched.helpers({
  			return "There are no puzzles named ";
  		} else {
  			return "The puzzles that are named ";
- 		}},
+ 		};},
  	usercheck:function () {
 		if (Session.get("searchPeople") == "") {
  			
  			return "There are no users named ";
  		} else {
- 			return "The userss that are named ";
- 		}},
+ 			return "The users that are named ";
+ 		};},
 
 	
 

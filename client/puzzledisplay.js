@@ -1,17 +1,51 @@
+var puzzleID;
+var timeStart;
+var timeEnd;
+
+Template.puzzledisplay.rendered = function(){
+		Session.set("timeStart",(new Date()).getTime());
+}
+
+
 Template.puzzledisplay.events({
 'click #submitPuzzle': function(event){
-	var newUserAnswer = $("#newuseranswer").val();
+	var timeStart = Session.get("timeStart");
+	var puzzleID = $("#puzzleID").val();
+	var newUserAnswer = $("#newuseranswer").val().toLowerCase();
 
-	
-	if (newUserAnswer == (Session.get("answer"))) {
+	var puzzleObj = Puzzles.findOne({_id:puzzleID}); 		
+	var rightAnswer =  puzzleObj.puzzleanswer;
+	//var puzzleanswer =
+	var didPuzzleAlready = Didpuzzle.find({UserId:Meteor.userId(),puzzleid:puzzleID}).count()>0;
+
+	if (newUserAnswer == rightAnswer) {
 		
+		
+		if (didPuzzleAlready ==  ""){
+			
+			timeEnd = (new Date()).getTime();
+			var timeDiff = (timeEnd - timeStart)/1000;
+			alert(timeDiff);
+		}
+		var didpuzzle = {UserId:Meteor.userId(), 
+			puzzleid:puzzleID};
+		Didpuzzle.insert(didpuzzle);
 		Router.go('/yay');
 
 
 	}
-	else{
+	else{alert(2)
 		
 		Router.go('/boo');
+		
+
+		
+		var didpuzzle = {UserId:Meteor.userId(), 
+			puzzleid:puzzleID};
+		Didpuzzle.insert(didpuzzle);
+
+	}
+
 	}
 
 
@@ -22,6 +56,4 @@ Template.puzzledisplay.events({
 
 
 
-
-}
 })

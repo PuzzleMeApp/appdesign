@@ -1,3 +1,7 @@
 .bigFont{
 	font-size: 200%;
 }
+.puzzlelink{
+	background:transparent; 
+	border: none !important;
+}

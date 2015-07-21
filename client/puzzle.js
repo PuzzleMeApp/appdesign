@@ -20,15 +20,31 @@ Template.puzzle.events({
   'click button#showMore': function(event){
     Session.set("showNum",2 + Session.get("showNum"))
   },
-    'click button#showLess': function(event){1
+    'click button#showLess': function(event){
     Session.set("showNum",-2 + Session.get("showNum"))
 
-  }
+  },
 
-});
+  'click button#puzzlelink': function(event){
+    
+
+    }
+
+     
 
 
-Session.set("counter",0);
+
+
+  
+
+  });
+
+
+
+
+
+
+
 
 
 Template.demoTemp.events(
