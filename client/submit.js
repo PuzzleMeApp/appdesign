@@ -21,7 +21,9 @@ Template.submit.events({
  			puzzle:newPuzzle,
  			puzzleanswer:newPuzzleAnswer,
  			createdAt:new Date(),
- 			counter:Session.set("counter",0)
+ 			counter:0,
+
+ 			likers:[]
  	
  	};
 
