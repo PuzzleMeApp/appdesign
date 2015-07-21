@@ -1,5 +1,6 @@
-var likes=777;
-var likes2 = likes;
+var puzzlelikes = $("#likes").val();
+var newLikes=$("#newLikes").val();
+var likes=Puzzles.likes;
 var hasDowngraded = false;
 var hasUpgraded=false;
 
@@ -9,10 +10,10 @@ Template.demoTemp.events(
 		hasUpgraded=true;
 
 		if(hasDowngraded){
-			likes++;
+			Puzzles.update(this._id,{$inc:{likes:1}});
 		}
+			Puzzles.update(this._id,{$inc:{likes:1}});
 
-		likes++;
 		$("#countInfo").html(likes);
 		document.getElementById("upvote").disabled=true;
 		document.getElementById("downvote").disabled=false;
@@ -23,9 +24,11 @@ Template.demoTemp.events(
 		
 		hasDowngraded = true;
 		if(hasUpgraded){
-			likes--;
+			Puzzles.update(this._id,{$inc:{likes:-1}});
+
 		}
-		likes--;
+			Puzzles.update(this._id,{$inc:{likes:-1}});
+
 		$("#countInfo").html(likes);
 
 		document.getElementById("downvote").disabled=true;
@@ -36,11 +39,3 @@ Template.demoTemp.events(
 
 
 
-Template.demoTemp.helpers({
-  
-
-  likes: function (){
-  	return likes;
-  }
-
-}); 

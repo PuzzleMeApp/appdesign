@@ -5,13 +5,17 @@ Template.submit.events({
  	var newPuzzleName = $("#newpuzzlename").val();
  	var newPuzzle = $("#newpuzzle").val();
  	var newPuzzleAnswer = $("#newpuzzleanswer").val();
- 	
+
+ 	var newPuzzleImage=$("#newpuzzleimage").val();
+
+
  	
  	
 
  	$("#newpuzzlename").val("");
  	$("#newpuzzle").val("");
  	$("#newpuzzleanswer").val("");
+ 	$("#newpuzzleimage").val("");
 
  	
 
@@ -19,10 +23,16 @@ Template.submit.events({
  	var puzzledata =
  		{puzzlename:newPuzzleName.toLowerCase(),
  			puzzle:newPuzzle,
+
  			puzzleanswer:newPuzzleAnswer.toLowerCase(),
  			createdAt:new Date(), 			
 			likes:0,
-			likers:[]
+			likers:[],
+ 			puzzleanswer:newPuzzleAnswer,
+ 			createdAt:new Date(),
+ 			image:newPuzzleImage
+ 			
+
 
  	
  	};
