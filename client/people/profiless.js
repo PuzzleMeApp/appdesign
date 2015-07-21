@@ -3,9 +3,12 @@ Template.profiless.events({
 	FS.Utility.eachFile(event, function(file) {
 		Images.insert(file, function(err, fileObj) {
 			if (err){
-				//handle error
+				console.log("file")
 			} else {
-				//handle success depending what you need to do
+			  //images: function () {
+				//return Images.find({},
+                       //{limit:1
+                       //})};
 			}
 			var userId  = Meteor.userId();
 			var imagesURL = {
@@ -16,6 +19,7 @@ Template.profiless.events({
 			});
 		});
 	}
+
 })
 
   

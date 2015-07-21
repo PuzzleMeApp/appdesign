@@ -1,16 +1,18 @@
 <template name="homepage">
-	<div class="row container-fluid jumbotron ">
-		<div class="col-md-12">
+	<div class="row container-fluid">
+		<div class="col-md-14">
 			<h1 class="text-center jumbotron"> 
 					Puzzle Me <br>
-				<small> Challenge Yourself Always</small>
+				<small> Challenge Yourself. Always.</small>
 			</h1>
 		</div>
-		<div class=" col-md-6 jumbotron bg-warning">
+		<div class="col-md-6 jumbotron bg-warning">
 			{{#if currentUser}}
-			<img src="images/PicsForHeaders.jpg" width= "500"><br>
+			<center><img src="images/PicsForHeaders.jpg" width= "500" ></center><br>
 			<center><a class="btn butn-default text-center" href="/submit"><h3 class="text-center mySmallFont jumbotron">Submit A Puzzle</h3></a></center>
 			{{else}}
+				<center><img src="images/PicsForHeaders.jpg" width="500" ></center>
+				<center><a class="btn butn-default text-center" href="/notUser"><h3 class="text-center mySmallFont jumbotron"> Submit A Puzzle</h3></a>
 				<img src="images/PicsForHeaders.jpg" width="500" >
 				<center><a class="btn btn-default text-center" href="/notUser"><h3 class="text-center mySmallFont jumbotron"> Sumbit A Puzzle</h3></a>
 				</center>
@@ -19,26 +21,26 @@
 		</div>	
 
 		<div class="col-md-6 jumbotron">
-			<img src="images/Rubiks.png" width="500" height="355">
+			<center><img src="images/Rubiks.png" width="500" height="400"></center>
 				<center><a class="btn butn-default text-center" href="/puzzle"><h3 class="text-center mySmallFont jumbotron"> Solve Puzzles</h3></a></center>
 		</div>
 		<br>
 		
 		<div class="jumbotron col-md-6">
 			{{#if currentUser}}
-				<img src="{{photo}}?s=400" width="520" height="330">
+				<center><img src="{{photo}}?s=400" width="500" height="450"></center>
 				<center><a class="btn butn-default text-center" href="/myprofile"><h3 class="text-center mySmallFont jumbotron"> My Profile</h3></a></center>
 			{{else}}
-				<img src="http://www.natandmarie.com/wp-content/uploads/2013/06/rsz_facebook.jpg" width="520">
+				<center><img src="http://www.natandmarie.com/wp-content/uploads/2013/06/rsz_facebook.jpg" width="520"></center>
 				<center><a class="btn butn-default text-center" href="/notUser"><h3 class="text-center mySmallFont jumbotron"> My Profile</h3></a></center>
 			{{/if}}
 			
 		</div>
 		<div class="jumbotron col-md-6">
 			
-			<img src="http://i.ytimg.com/vi/ARM42-eorzE/maxresdefault.jpg" width="520" height= 335>
+			<center><img src="http://i.ytimg.com/vi/ARM42-eorzE/maxresdefault.jpg" width="500" height="450"></center>
 			
-			<center><a class="btn butn-default text-center" href="/myprofile"><h3 class="text-center mySmallFont jumbotron"> About Us</h3></a></center>
+			<center><a class="btn butn-default text-center" href="/welcome"><h3 class="text-center mySmallFont jumbotron"> About Us</h3></a></center>
 			
 			
 		</div>

@@ -18,8 +18,13 @@ Template.puzzledisplay.events({
 	//var puzzleanswer =
 	var didPuzzleAlready = Didpuzzle.find({UserId:Meteor.userId(),puzzleid:puzzleID}).count()>0;
 
-	if (newUserAnswer == rightAnswer) {
+
+	
 		
+
+	
+	if (newUserAnswer.toUpperCase() == (Session.get("answer").toUpperCase())) {
+
 		
 		if (didPuzzleAlready ==  ""){
 			

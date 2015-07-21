@@ -20,12 +20,9 @@ Template.submit.events({
  		{puzzlename:newPuzzleName.toLowerCase(),
  			puzzle:newPuzzle,
  			puzzleanswer:newPuzzleAnswer.toLowerCase(),
- 			createdAt:new Date(),
- 			counter:Session.set("counter",0),
- 			
-
- 			
-
+ 			createdAt:new Date(), 			
+			likes:0
+			likers:[]
 
  	
  	};

@@ -3,7 +3,7 @@
 		
 		
 		<!-- Here is the standard Bootstrap code for a Navigation bar taken directly from getbootstrap.com/components -->
-		<nav class="navbar navbar-info">
+		<nav class="navbar navbar-info navbar-fixed-bottom">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -29,6 +29,7 @@
 					{{/if}}
 					
 					<li><a href="{{pathFor 'puzzle'}}">Puzzles</a></li>
+					<li><a href="{{pathFor 'feedback'}}">Feedback</a></li>
 				{{#if currentUser}}
 					<li><a href="{{pathFor 'myprofile'}}">MyProfile</a></li>
 				{{/if}}
@@ -45,7 +46,7 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 
-		<div id="searchBar">
+		<div id="searchBar searchBar-info">
 			{{> search}}
 		</div>
 		<!-- Here is where the actual content of the page gets inserted by the router! -->
