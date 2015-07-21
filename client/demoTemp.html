@@ -1,14 +1,11 @@
 <template name="demoTemp">
-<div id="countInfo" class="text-center" >
-		<h4>Likes =  {{counter}}</h4>
-	
-	<h3><center>
-
-	<button id="clicker" class="glyphicon glyphicon-thumbs-up text-center btn-success"></button>
-	<button id="exit" class="glyphicon glyphicon-thumbs-down text-center btn-danger"></button>
-	</center>
-	</h3>
+	<div class="text-center" >
+		<h4>Likes =  <span id="countInfo">{{likes}}</span></h4>
+		<h3>
+			<center>
+				<button id="upvote" class="glyphicon glyphicon-thumbs-up text-center btn-success"> </button>
+				<button id="downvote" class="glyphicon glyphicon-thumbs-down text-center btn-danger"></button>
+			</center>
+		</h3>
 	</div>
-
-	
 </template>
