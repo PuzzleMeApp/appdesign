@@ -91,7 +91,7 @@ Template.puzzledisplay.events({
 
 	}
 
-}
+}}
 )
 
 
