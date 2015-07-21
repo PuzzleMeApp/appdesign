@@ -15,26 +15,34 @@ Template.puzzledisplay.events({
 
 	var puzzleObj = Puzzles.findOne({_id:puzzleID}); 		
 	var rightAnswer =  puzzleObj.puzzleanswer;
-	//var puzzleanswer =
-	var didPuzzleAlready = Didpuzzle.find({UserId:Meteor.userId(),puzzleid:puzzleID}).count()>0;
+
+	var didPuzzleAlready = undefined != Didpuzzle.findOne({UserId:Meteor.userId(),puzzleid:puzzleID});
 
 
 	
 		
 
 	
-	if (newUserAnswer.toUpperCase() == (Session.get("answer").toUpperCase())) {
+	if (newUserAnswer.toLowerCase() == (rightAnswer).toLowerCase()) {
 
 		
-		if (didPuzzleAlready ==  ""){
+		if (didPuzzleAlready ==  false){
 			
 			timeEnd = (new Date()).getTime();
 			var timeDiff = (timeEnd - timeStart)/1000;
-			alert(timeDiff);
-		}
-		var didpuzzle = {UserId:Meteor.userId(), 
+			var didpuzzle = {UserId:Meteor.userId(), 
 			puzzleid:puzzleID};
-		Didpuzzle.insert(didpuzzle);
+		 
+			Didpuzzle.insert(didpuzzle);
+
+			var timepuzzle = ({time:timeDiff, puzzleid:puzzleID});
+			Time.insert(timepuzzle);
+
+			
+		}
+		;
+		
+		
 		Router.go('/yay');
 
 
@@ -42,12 +50,16 @@ Template.puzzledisplay.events({
 	else{alert(2)
 		
 		Router.go('/boo');
-		
+		if (didPuzzleAlready ==  false){
+			var didpuzzle = {UserId:Meteor.userId(), 
+			puzzleid:puzzleID};
+			Didpuzzle.insert(didpuzzle);
+			
+		}
 
 		
-		var didpuzzle = {UserId:Meteor.userId(), 
-			puzzleid:puzzleID};
-		Didpuzzle.insert(didpuzzle);
+	
+		
 
 	}
 

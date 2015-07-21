@@ -5,9 +5,11 @@ Meteor.publish("ourpuzzles",function(){return Puzzles.find();});
 Meteor.publish("theUsers", function(){return People.find();});
 
 
-Meteor.publish("alreadytried", function(){return Didpuzzles.find();});
+Meteor.publish("alreadytried", function(){return Didpuzzle.find();});
 
 Meteor.publish("theFeedback", function(){return Feedback.find();});
+
+Meteor.publish("theTime", function(){return Time.find();});
 
 
 Meteor.publish("userData", function () {
