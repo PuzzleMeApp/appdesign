@@ -4,7 +4,6 @@ Meteor.publish("ourpuzzles",function(){return Puzzles.find();});
 
 Meteor.publish("theUsers", function(){return People.find();});
 
-<<<<<<< HEAD
 
 Meteor.publish("alreadytried", function(){return Didpuzzle.find();});
 
@@ -13,8 +12,6 @@ Meteor.publish("theFeedback", function(){return Feedback.find();});
 Meteor.publish("theTime", function(){return Time.find();});
 
 
-=======
->>>>>>> origin/master
 Meteor.publish("userData", function () {
   if (this.userId) {
 	  return Meteor.users.find({}); //, //{_id: this.userId},
