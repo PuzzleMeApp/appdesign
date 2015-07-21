@@ -29,7 +29,7 @@ Template.feedback.events({
  	Feedback.insert(feedbackdata);
 
 
-
+Router.go("feedbackresponse")
 
 
  		}
