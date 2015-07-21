@@ -21,7 +21,7 @@ Template.submit.events({
  			puzzle:newPuzzle,
  			puzzleanswer:newPuzzleAnswer.toLowerCase(),
  			createdAt:new Date(), 			
-			likes:0
+			likes:0,
 			likers:[]
 
  	

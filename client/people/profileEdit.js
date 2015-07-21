@@ -20,11 +20,8 @@ Template.profileEdit.events({
 					'profile.firstName':firstName, 
 					'profile.lastName':lastName,
 					'profile.age':age,
-<<<<<<< HEAD
 					'profile.userName':userName.toLowerCase()}});
-=======
-					'profile.username':userName}});
->>>>>>> origin/master
+
 		Router.go('/profile/'+this._id);
 
 		var userData = {
