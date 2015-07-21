@@ -5,13 +5,10 @@ Template.submit.events({
  	var newPuzzleName = $("#newpuzzlename").val();
  	var newPuzzle = $("#newpuzzle").val();
  	var newPuzzleAnswer = $("#newpuzzleanswer").val();
-<<<<<<< Updated upstream
- 	
-=======
- 	 Session.set("answer",$("#newpuzzleanswer").val());
+
  	var newPuzzleImage=$("#newpuzzleimage").val();
 
->>>>>>> Stashed changes
+
  	
  	
 
@@ -26,17 +23,16 @@ Template.submit.events({
  	var puzzledata =
  		{puzzlename:newPuzzleName.toLowerCase(),
  			puzzle:newPuzzle,
-<<<<<<< Updated upstream
+
  			puzzleanswer:newPuzzleAnswer.toLowerCase(),
  			createdAt:new Date(), 			
 			likes:0,
-			likers:[]
-=======
+			likers:[],
  			puzzleanswer:newPuzzleAnswer,
  			createdAt:new Date(),
- 			image=newPuzzleImage,
- 			counter:0,
->>>>>>> Stashed changes
+ 			image:newPuzzleImage
+ 			
+
 
  	
  	};
