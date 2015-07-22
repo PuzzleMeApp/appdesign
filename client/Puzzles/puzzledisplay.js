@@ -48,7 +48,6 @@ Template.puzzledisplay.events({
 
 	if (newUserAnswer.toLowerCase() == (rightAnswer).toLowerCase()) {
 
-	if (newUserAnswer.toUpperCase() == rightAnswer.toUpperCase()) {
 
 
 		
@@ -74,7 +73,7 @@ Template.puzzledisplay.events({
 
 
 	}
-	else{alert(2)
+	else{
 		
 		Router.go('/boo');
 		if (didPuzzleAlready ==  false){
@@ -91,9 +90,22 @@ Template.puzzledisplay.events({
 
 	}
 
+	},
+
+'click #answerPuzzle':function(event){
+	var puzzleObj = Puzzles.findOne({_id:puzzleID}); 		
+	var rightAnswer =  puzzleObj.puzzleanswer;
+	alert(rightAnswer);
+
+
+
+		
 	}
 
-}}
+	}
+
+
+
 )
 
 
