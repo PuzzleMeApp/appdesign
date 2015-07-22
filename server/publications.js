@@ -11,6 +11,8 @@ Meteor.publish("theFeedback", function(){return Feedback.find();});
 
 Meteor.publish("theTime", function(){return Time.find();});
 
+Meteor.publish("whoLiked", function(){return Likers.find();});
+
 
 Meteor.publish("userData", function () {
   if (this.userId) {

@@ -6,7 +6,7 @@ Meteor.subscribe("theUsers");
 Meteor.subscribe("alreadytried");
 Meteor.subscribe("theFeedback");
 Meteor.subscribe("theTime");
-
+Meteor.subscribe("whoLiked");
 
 
 

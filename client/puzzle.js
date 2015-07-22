@@ -7,7 +7,7 @@ Template.puzzle.helpers({
 	  return Puzzles.find({},
 
                        {limit:Session.get("showNum"),
-                        sort:{counter:-1}}
+                        sort:{likes:-1}}
                       ).fetch();
                        },// we are finding all of the quotes on the server to show on the client
   
@@ -67,17 +67,6 @@ Template.demoTemp.helpers(
     }})
 
 
-Template.demoTemp.events(
-{
-"click button#clicker":
-
- function(event) {
- 
-  Puzzles.update(this._id,{$inc:{likes: 1}});
-
-
-    } 
-  })
   /*var alreadyLikedikes = _.contains(this.likers,Meteor.userId());
   console.log("this= "); console.dir(this);
 
@@ -93,20 +82,7 @@ Template.demoTemp.events(
   
   }});*/
 
-
-Template.demoTemp.events(
-{    
-
-
-"click button#exit": 
-function(event) {
-  //first check to see if the current user has already liked this quote
-  
-   Puzzles.update(this._id,{$inc:{likes: -1}});
- }
-   } 
-
-);  
+ 
   /*var alreadyLikes = _.contains(this.likers,Meteor.userId());
   
 

@@ -62,7 +62,8 @@ Template.puzzledisplay.events({
 			Didpuzzle.insert(didpuzzle);
 
 			var timepuzzle = ({time:timeDiff, puzzleid:puzzleID});
-			Time.insert(timepuzzle);
+			Time.insert(timepuzzle)
+			Session.set("time",timeDiff);
 
 			
 		}
@@ -80,6 +81,7 @@ Template.puzzledisplay.events({
 			var didpuzzle = {UserId:Meteor.userId(), 
 			puzzleid:puzzleID};
 			Didpuzzle.insert(didpuzzle);
+
 			
 		}
 

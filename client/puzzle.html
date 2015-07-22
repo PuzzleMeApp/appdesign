@@ -1,7 +1,5 @@
 <template name="puzzle">
 
-	<h2 class="jumbotron text-center">The most recent {{ showNum}} puzzles are <br><br></h2>
-
 	<h2 class="jumbotron text-center">The most popular puzzles are... <br><br>
 
 	</h2>
@@ -33,7 +31,7 @@
 <template name="puzzleLine">
 	<tr>
 		<td><div class="col-md-8">
-			<center><a href="{{pathFor 'puzzledisplay'}}"><button id="puzzlelink" class="puzzlelink">
+			<center><a href="{{pathFor 'puzzledisplay'}}"><button id="puzzlelink" class="puzzlelink btn-block">
 			<h1 class="puzzlename text-center">{{puzzlename}}</h1></button>
 			</a></center></div>
 		</td>
